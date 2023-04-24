@@ -11,9 +11,11 @@ const Infor = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   :hover {
     transform: scale(1.1);
-    background-color: antiquewhite;
+    box-shadow: inset 180px 0 0 0 #54b3d6;
+    color: white;
   }
 `;
 const Container = styled.div`
