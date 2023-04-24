@@ -1,6 +1,6 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { Button, Space } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 import { sliderItems } from "../data";
@@ -10,6 +10,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
+  background-color: green;
   overflow: hidden;
 `;
 const Wrapper = styled.div`
@@ -73,6 +74,7 @@ function Slider() {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
+  setInterval(handleClick, 5000);
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
@@ -104,14 +106,13 @@ function Slider() {
                     cursor: "pointer",
                   }}
                 >
-                  Order now
+                  ORDER NOW
                 </Button>
               </Space>
             </InforContainer>
           </Slide>
         ))}
       </Wrapper>
-
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>

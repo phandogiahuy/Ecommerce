@@ -43,7 +43,7 @@ const CategoriesItem = ({ item }) => {
               marginBottom: "20px",
             }}
           >
-            ORDER NOW
+            SEE MORE
           </Button>
         </Space>
       </Infor>
