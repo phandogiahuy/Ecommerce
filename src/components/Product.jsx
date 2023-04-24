@@ -1,11 +1,11 @@
 import { ShoppingOutlined } from "@ant-design/icons";
-import { Button, Space, Col } from "antd";
+import { Button, Space, Col, Card } from "antd";
 import React from "react";
 import styled from "styled-components";
 
 const Infor = styled.div`
   position: absolute;
-  top: 500;
+  bottom: 20px;
   left: 130px;
   display: flex;
   align-items: center;
@@ -13,6 +13,7 @@ const Infor = styled.div`
   cursor: pointer;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   margin-left: 20px;
+
   :hover {
     transform: scale(1.1);
     box-shadow: inset 180px 0 0 0 #54b3d6;
@@ -22,45 +23,43 @@ const Infor = styled.div`
 
 const Image = styled.img`
   height: 100%;
-  z-index: 2;
   width: 100%;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 const Price = styled.div`
   font-weight: 700;
   font-size: 20px;
-  position: absolute;
-  top: 460px;
-  left: 40px;
 `;
 const Product = ({ item }) => {
   return (
-    <Col
-      className="gutter-row"
-      span={6}
-      style={{ marginTop: 20, position: "relative" }}
-    >
-      <Image src={item.img} />
-      <Price>100,000₫</Price>
-      <Infor>
-        <Space wrap>
-          <Button
-            className="buttonBuy"
-            ghost
-            type="primary"
-            icon={<ShoppingOutlined />}
-            style={{
-              fontSize: "20px",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              color: "#1C2F7F",
-              border: "#38498f solid 2px",
-            }}
-          >
-            ORDER NOW
-          </Button>
-        </Space>
-      </Infor>
+    <Col className="gutter-row" span={6} style={{ position: "relative" }}>
+      <Card style={{ width: 450, border: "none" }}>
+        <Image src={item.img} />
+        <Price>100,000₫</Price>
+        <Infor>
+          <Space wrap>
+            <Button
+              className="buttonBuy"
+              ghost
+              type="primary"
+              icon={<ShoppingOutlined />}
+              style={{
+                fontSize: "20px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                color: "#1C2F7F",
+                border: "#38498f solid 2px",
+              }}
+            >
+              ORDER NOW
+            </Button>
+          </Space>
+        </Infor>
+      </Card>
     </Col>
   );
 };
