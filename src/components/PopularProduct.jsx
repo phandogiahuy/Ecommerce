@@ -3,20 +3,15 @@ import styled from "styled-components";
 
 import { popularProducts } from "../data";
 import Product from "./Product";
+import { Row } from "antd";
 
-const Container = styled.div`
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
 const PopularProduct = () => {
   return (
-    <Container>
+    <Row gutter={[16, 24]}>
       {popularProducts.map((item) => (
         <Product item={item} key={item.id} />
       ))}
-    </Container>
+    </Row>
   );
 };
 

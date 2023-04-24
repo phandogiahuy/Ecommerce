@@ -1,40 +1,25 @@
 import { ShoppingOutlined } from "@ant-design/icons";
-import { Button, Space } from "antd";
+import { Button, Space, Col } from "antd";
 import React from "react";
 import styled from "styled-components";
 
 const Infor = styled.div`
   position: absolute;
-  top: 355px;
+  top: 500;
   left: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-left: 20px;
   :hover {
     transform: scale(1.1);
-    background-color: antiquewhite;
+    box-shadow: inset 180px 0 0 0 #54b3d6;
+    color: white;
   }
 `;
-const Container = styled.div`
-  flex: 1;
-  margin: 5px;
-  min-width: 300px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: aliceblue;
-  position: relative;
-  margin-top: 40px;
-`;
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: white;
-  position: absolute;
-`;
+
 const Image = styled.img`
   height: 100%;
   z-index: 2;
@@ -44,13 +29,16 @@ const Price = styled.div`
   font-weight: 700;
   font-size: 20px;
   position: absolute;
-  top: 355px;
-  left: 1px;
+  top: 460px;
+  left: 40px;
 `;
 const Product = ({ item }) => {
   return (
-    <Container>
-      <Circle />
+    <Col
+      className="gutter-row"
+      span={6}
+      style={{ marginTop: 20, position: "relative" }}
+    >
       <Image src={item.img} />
       <Price>100,000₫</Price>
       <Infor>
@@ -73,7 +61,7 @@ const Product = ({ item }) => {
           </Button>
         </Space>
       </Infor>
-    </Container>
+    </Col>
   );
 };
 

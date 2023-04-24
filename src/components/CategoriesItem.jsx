@@ -1,4 +1,3 @@
-import shadows from "@material-ui/core/styles/shadows";
 import { Button, Space } from "antd";
 import React from "react";
 import styled from "styled-components";
@@ -24,7 +23,6 @@ const Title = styled.h1`
   font-size: 30px;
   margin-bottom: 20px;
 `;
-
 const CategoriesItem = ({ item }) => {
   return (
     <Container>
