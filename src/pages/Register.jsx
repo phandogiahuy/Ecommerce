@@ -1,5 +1,4 @@
-import { Button, Form, Input, Select } from "antd";
-import React, { useState } from "react";
+import { Button, Form, Input, message } from "antd";
 import styled from "styled-components";
 
 const Container = styled.div``;
@@ -35,7 +34,16 @@ const formItemLayout = {
     },
   },
 };
+
 const Register = () => {
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const success = () => {
+    messageApi.open({
+      type: "success",
+      content: "You create an account sucessfully",
+    });
+  };
   const [form] = Form.useForm();
   return (
     <Container>
@@ -107,7 +115,7 @@ const Register = () => {
           </Form.Item>
           <Form.Item
             name="confirm"
-            label="Confirm Password"
+            label="Confirm Pass"
             dependencies={["password"]}
             hasFeedback
             rules={[
@@ -136,7 +144,7 @@ const Register = () => {
             />
           </Form.Item>
           <Form.Item {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" onClick={success}>
               Register
             </Button>
           </Form.Item>

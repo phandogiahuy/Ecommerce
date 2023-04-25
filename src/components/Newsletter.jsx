@@ -3,6 +3,8 @@ import { Descriptions } from "antd";
 import React from "react";
 import styled from "styled-components";
 
+import { mobile } from "../responsive";
+
 const Container = styled.div`
   height: 40vh;
   background-color: #fcf5f5;
@@ -11,10 +13,12 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 20px;
+  ${mobile({ flexDirection: "column" })}
 `;
 const Title = styled.h1``;
 const Description = styled.div`
   padding: 15px;
+  ${mobile({ textAlign: "center" })}
 `;
 const InputContainer = styled.div`
   width: 50%;
@@ -23,6 +27,7 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1 solid lightgray;
+  ${mobile({ width: "80%" })}
 `;
 const Input = styled.input`
   flex: 8;

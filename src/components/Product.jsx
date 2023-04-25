@@ -1,5 +1,5 @@
 import { ShoppingOutlined } from "@ant-design/icons";
-import { Button, Space, Col, Card } from "antd";
+import { Button, Card, Col, Space } from "antd";
 import React from "react";
 import styled from "styled-components";
 
@@ -35,7 +35,7 @@ const Price = styled.div`
 `;
 const Product = ({ item }) => {
   return (
-    <Col className="gutter-row" span={6} style={{ position: "relative" }}>
+    <Col className="gutter-row" span={6}>
       <Card style={{ width: 450, border: "none" }}>
         <Image src={item.img} />
         <Price>100,000₫</Price>

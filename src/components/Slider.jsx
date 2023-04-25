@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 import { sliderItems } from "../data";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -12,6 +13,7 @@ const Container = styled.div`
   position: relative;
   background-color: green;
   overflow: hidden;
+  ${mobile({ display: "none" })}
 `;
 const Wrapper = styled.div`
   height: 100%;
