@@ -33,34 +33,43 @@ const Price = styled.div`
   font-weight: 700;
   font-size: 20px;
 `;
-
+// xs: 8,
+// sm: 16,
+// md: 24,
+// lg: 32,
 const Product = ({ item }) => {
   return (
-    <Col className="gutter-row" span={6}>
-        <Card style={{ width: 450, border: "none" }}>
-          <Image src={item.img} />
-          <Price>100,000₫</Price>
-          <Infor>
-            <Space wrap>
-              <Button
-                className="buttonBuy"
-                ghost
-                type="primary"
-                icon={<ShoppingOutlined />}
-                style={{
-                  fontSize: "20px",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  color: "#1C2F7F",
-                  border: "#38498f solid 2px",
-                }}
-              >
-                ORDER NOW
-              </Button>
-            </Space>
-          </Infor>
-        </Card>
+    <Col
+      className="gutter-row"
+      md={{ span: 8 }}
+      sm={{ span: 12 }}
+      xs={{ span: 24 }}
+      lg={{ span: 6 }}
+    >
+      <Card style={{ width: 450, border: "none" }}>
+        <Image src={item.img} />
+        <Price>100,000₫</Price>
+        <Infor>
+          <Space wrap>
+            <Button
+              className="buttonBuy"
+              ghost
+              type="primary"
+              icon={<ShoppingOutlined />}
+              style={{
+                fontSize: "20px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                color: "#1C2F7F",
+                border: "#38498f solid 2px",
+              }}
+            >
+              ORDER NOW
+            </Button>
+          </Space>
+        </Infor>
+      </Card>
     </Col>
   );
 };
