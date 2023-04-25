@@ -67,7 +67,7 @@ const Product = styled.div`
 `;
 const ProductDetail = styled.span`
   display: flex;
-  width: 40%;
+  width: 30%;
   margin-left: 100px;
   margin-top: 20px;
 `;
@@ -75,15 +75,13 @@ const ProductName = styled.p`
   margin-left: 10px;
 `;
 const ProductQuanity = styled.p`
-  margin-left: 20px;
+  margin-left: 30px;
 `;
-const ProductPrice = styled.p`
-  margin-left: 360px;
-`;
+const ProductPrice = styled.p``;
 const ProductType = styled.span`
   display: flex;
-  width: 60%;
-  margin-left: 80px;
+  width: 80%;
+  justify-content: space-around;
 `;
 const Bottom = styled.div``;
 const Summary = styled.div`

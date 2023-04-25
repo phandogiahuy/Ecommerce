@@ -10,7 +10,7 @@ import Register from "./pages/Register";
 const App = () => {
   return (
     <div>
-      <Home />
+      <Cart />
     </div>
   );
 };
