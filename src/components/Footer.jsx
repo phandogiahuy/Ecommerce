@@ -5,8 +5,6 @@ import {
   MailOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
-import { Descriptions } from "antd";
-import React from "react";
 import styled from "styled-components";
 
 import { mobile } from "../responsive";
@@ -44,9 +42,7 @@ const Logo = styled.h1``;
 const Desc = styled.div`
   margin: 20px 0px;
 `;
-const SocialContainer = styled.div`
-  display: flex;
-`;
+
 const SocialIcon = styled.div`
   width: 40px;
   height: 40px;
