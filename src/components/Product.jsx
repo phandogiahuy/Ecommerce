@@ -33,9 +33,19 @@ const Price = styled.div`
   font-weight: 700;
   font-size: 20px;
 `;
+// xs: 8,
+// sm: 16,
+// md: 24,
+// lg: 32,
 const Product = ({ item }) => {
   return (
-    <Col className="gutter-row" span={6}>
+    <Col
+      className="gutter-row"
+      md={{ span: 8 }}
+      sm={{ span: 12 }}
+      xs={{ span: 24 }}
+      lg={{ span: 6 }}
+    >
       <Card style={{ width: 450, border: "none" }}>
         <Image src={item.img} />
         <Price>100,000₫</Price>

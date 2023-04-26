@@ -51,13 +51,16 @@ const MenuItem = styled.div`
   margin-left: 15px;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
+const ContainerSearch = styled.div`
+  ${mobile({ marginBottom: "30px", marginRight: 10 })}
+`;
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
           <Language>English</Language>
-          <Space direction="vertical">
+          <ContainerSearch>
             <Search
               placeholder="input search text"
               allowClear
@@ -68,7 +71,7 @@ const Navbar = () => {
                 backgroundColor: "coral",
               }}
             />
-          </Space>
+          </ContainerSearch>
         </Left>
         <Center>
           <Logo>AROMA deLute.</Logo>

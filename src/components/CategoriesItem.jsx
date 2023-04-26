@@ -1,19 +1,17 @@
-import { Button, Space } from "antd";
+import { Button, Space, Col } from "antd";
 import React from "react";
 import styled from "styled-components";
-
-import { mobile } from "../responsive";
 
 const Container = styled.div`
   flex: 1;
   margin: 3px;
   height: 70vh;
+  margin-bottom: 50px;
 `;
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mobile({ height: "60vh" })}
 `;
 const Infor = styled.div`
   display: flex;
@@ -28,27 +26,35 @@ const Title = styled.h1`
 `;
 const CategoriesItem = ({ item }) => {
   return (
-    <Container>
-      <Image src={item.img} />
-      <Infor>
-        <Title>{item.title}</Title>
-        <Space wrap>
-          <Button
-            style={{
-              backgroundColor: "peachpuff",
-              letterSpacing: "1px",
-              fontSize: "20px",
-              marginLeft: "10px",
-              border: "none",
-              padding: "5px",
-              marginBottom: "20px",
-            }}
-          >
-            SEE MORE
-          </Button>
-        </Space>
-      </Infor>
-    </Container>
+    <Col
+      className="gutter-row"
+      md={{ span: 8 }}
+      sm={{ span: 24 }}
+      xs={{ span: 24 }}
+      lg={{ span: 8 }}
+    >
+      <Container>
+        <Image src={item.img} />
+        <Infor>
+          <Title>{item.title}</Title>
+          <Space wrap>
+            <Button
+              style={{
+                backgroundColor: "peachpuff",
+                letterSpacing: "1px",
+                fontSize: "20px",
+                marginLeft: "10px",
+                border: "none",
+                padding: "5px",
+                marginBottom: "20px",
+              }}
+            >
+              SEE MORE
+            </Button>
+          </Space>
+        </Infor>
+      </Container>
+    </Col>
   );
 };
 

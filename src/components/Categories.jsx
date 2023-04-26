@@ -4,19 +4,21 @@ import styled from "styled-components";
 import { categories } from "../data";
 import { mobile } from "../responsive";
 import CategoriesItem from "./CategoriesItem";
+import { Row } from "antd";
 
 const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  ${mobile({ padding: "0px", flexWrap: "wrap" })}
 `;
 const Categories = () => {
   return (
     <Container>
-      {categories.map((item) => (
-        <CategoriesItem item={item} key={item.id} />
-      ))}
+      <Row gutter={[24, 8]}>
+        {categories.map((item) => (
+          <CategoriesItem item={item} key={item.id} />
+        ))}
+      </Row>
     </Container>
   );
 };
