@@ -22,7 +22,7 @@ const PopularProduct = () => {
   return (
     <Container>
       <Title> NEW PRODUCTS </Title>
-      <Row gutter={[24, 8]} style={{ marginTop: 5 }}>
+      <Row gutter={[24, 8]} style={{ marginTop: 10 }}>
         {popularProducts.map((item) => (
           <Product item={item} key={item.id} />
         ))}

@@ -1,4 +1,4 @@
-import { Button, Space, Col } from "antd";
+import { Button, Col, Space } from "antd";
 import React from "react";
 import styled from "styled-components";
 

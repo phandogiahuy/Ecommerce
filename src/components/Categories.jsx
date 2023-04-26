@@ -1,10 +1,10 @@
+import { Row } from "antd";
 import React from "react";
 import styled from "styled-components";
 
 import { categories } from "../data";
 import { mobile } from "../responsive";
 import CategoriesItem from "./CategoriesItem";
-import { Row } from "antd";
 
 const Container = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const Container = styled.div`
 const Categories = () => {
   return (
     <Container>
-      <Row gutter={[24, 8]}>
+      <Row gutter={[24, 8]} style={{ marginTop: "10px" }}>
         {categories.map((item) => (
           <CategoriesItem item={item} key={item.id} />
         ))}
