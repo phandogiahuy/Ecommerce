@@ -78,7 +78,7 @@ const Navbar = () => {
             content={<Register />}
             title="Welcome to Coffee World"
             trigger="click"
-            style={{ fontSize: 11000 }}
+            s
           >
             <MenuItem>REGISTER</MenuItem>
           </Popover>
